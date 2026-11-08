@@ -91,7 +91,7 @@ RUN wget -q https://github.com/vcftools/vcftools/releases/download/v${VCFTOOLS_V
 RUN samtools --version && bcftools --version && vcftools --version
 
 # Python-зависимости и скрипт для Задачи №3
-RUN pip3 install --no-cache-dir pysam
+RUN pip3 install --no-cache-dir pysam=0.24.1
 WORKDIR /workspace
 COPY convert_snp.py /workspace/convert_snp.py
 
